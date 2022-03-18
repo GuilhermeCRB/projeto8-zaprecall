@@ -1,0 +1,17 @@
+:root{
+    --main-color: #EC6869;
+    --logo-color: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    background-color: var(--main-color);
+}
+
+.root{
+    font-family: "Recursive";
+}
+
+.hidden{
+    display: none;
+}
