@@ -1,9 +1,13 @@
+import {useState} from "react";
+
 export default function InitialPage(){
-    return (
-        <section className="initial-page  hidden">
+    const [display, setDisplay] = useState(true);
+
+    return ( display ?
+        <section className="initial-page">
             <img src="./imgs/zap-icon.png" alt="ícone do ZapRecall" />
             <p className="nome-logo">ZapRecall</p>
-            <button>Iniciar Recall!</button>
-        </section>
+            <button onClick={() => setDisplay(false)}>Iniciar Recall!</button>
+        </section> : <></>
     );
 }

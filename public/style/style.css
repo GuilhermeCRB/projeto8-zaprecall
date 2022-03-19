@@ -9,9 +9,7 @@
 }
 
 .root{
+    display: flex;
+    justify-content: center;
     font-family: "Recursive";
-}
-
-.hidden{
-    display: none;
 }
