@@ -1,6 +1,9 @@
 :root{
     --main-color: #EC6869;
     --logo-color: #FFFFFF;
+    --didnt-remember: #FF3030;
+    --almost: #FF922E;
+    --zap: #2FBE34;
 }
 
 * {
