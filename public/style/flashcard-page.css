@@ -1,0 +1,48 @@
+.flashcard-page{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+.flashcard-page header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+
+.flashcard-page header h1{
+    font-family: "Righteous";
+    font-size: 36px;
+    margin-left: 10px;
+    color: var(--logo-color);
+}
+
+.flashcard-page main{
+    width: 100 vw;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    /* background-color: blueviolet; */
+}
+
+.flashcard-page footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--logo-color);
+}
+
+.flashcard-page footer p{
+    font-size: 18px;
+}

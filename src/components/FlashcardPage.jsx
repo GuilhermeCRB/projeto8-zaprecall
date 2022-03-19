@@ -12,7 +12,7 @@ function Header(){
     return(
         <header>
             <img src="./imgs/zap-icon.png" alt="ícone do ZapRecall" />
-            <p className="nome-logo">ZapRecall</p>
+            <h1 className="nome-logo">ZapRecall</h1>
         </header>
     );
 }
@@ -20,7 +20,7 @@ function Header(){
 function Main(){
     return(
         <main>
-            <p className="">Flashcards</p>
+            <p className="flashcard">Flashcards</p>
         </main>
     );
 }
@@ -28,7 +28,7 @@ function Main(){
 function Footer(){
     return(
         <footer>
-            <p className="">0/4 CONCLUÍDOS</p>
+            <p>0/4 CONCLUÍDOS</p>
         </footer>
     );
 }

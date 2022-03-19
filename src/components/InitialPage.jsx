@@ -6,7 +6,7 @@ export default function InitialPage(){
     return ( display ?
         <section className="initial-page">
             <img src="./imgs/zap-icon.png" alt="ícone do ZapRecall" />
-            <p className="nome-logo">ZapRecall</p>
+            <h1 className="nome-logo">ZapRecall</h1>
             <button onClick={() => setDisplay(false)}>Iniciar Recall!</button>
         </section> : <></>
     );
