@@ -16,7 +16,7 @@
     font-weight: bold;
 }
 
-.flashcard-page .play-icon{
+.flashcard-page .icon-play-outline{
     background-color: blue;
 }
 
@@ -91,4 +91,24 @@
 .reaction-zap{
     padding: 10px 0;
     background-color: var(--zap);
+}
+
+.flashcard-page .didnt-remember-question{
+    text-decoration: line-through;
+    color: var(--didnt-remember);
+}
+
+.flashcard-page .almost-question{
+    text-decoration: line-through;
+    color: var(--almost);
+}
+
+.flashcard-page .zap-question{
+    text-decoration: line-through;
+    color: var(--zap);
+}
+
+.flashcard ion-icon{
+    position: relative;
+    right: -170px;
 }

@@ -1,4 +1,6 @@
+import { useState } from "react";
 import Flashcard from "./Flashcard";
+import Footer from "./Footer"
 
 export default function FlashcardPage(){
     const flashcards = [
@@ -12,11 +14,14 @@ export default function FlashcardPage(){
         {question: "Usamos estado (state) para...", answer: "...dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"},
     ];
 
+    const [questionsAnswered, setQuestionsAnswered] = useState(0);
+    const [remembered, setRemembered] = useState([]);
+
     return(
         <section className="flashcard-page">
             <Header />
-            <Main flashcards={flashcards} />
-            <Footer />
+            <Main flashcards={flashcards} questionsAnswered = {questionsAnswered} setQuestionsAnswered = {setQuestionsAnswered} remembered = {remembered} setRemembered = {setRemembered} />
+            <Footer numberOfQuestion = {flashcards.length} questionsAnswered = {questionsAnswered} remembered = {remembered} />
         </section>
     );
 }
@@ -30,18 +35,12 @@ function Header(){
     );
 }
 
-function Main({flashcards}){
+function Main({flashcards, questionsAnswered, setQuestionsAnswered, remembered, setRemembered}){
     return(
         <main>
-            <Flashcard flashcards={flashcards} />
+            {flashcards.map(({answer,question},index)=>{
+                return <Flashcard answer = {answer} question = {question} index = {index} questionsAnswered = {questionsAnswered} setQuestionsAnswered = {setQuestionsAnswered} remembered = {remembered} setRemembered = {setRemembered} />
+            })}
         </main>
-    );
-}
-
-function Footer(){
-    return(
-        <footer>
-            <p>0/4 CONCLUÍDOS</p>
-        </footer>
     );
 }
