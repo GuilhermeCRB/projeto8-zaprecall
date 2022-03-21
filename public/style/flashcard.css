@@ -16,10 +16,6 @@
     font-weight: bold;
 }
 
-.flashcard-page .icon-play-outline{
-    background-color: blue;
-}
-
 .flashcard-question{
     position: relative;
     height: 150px;
@@ -45,7 +41,7 @@
 
 .flashcard-answer{
     position: relative;
-    height: 150px;
+    height: 200px;
     width: 300px;
     padding: 23px 15px;
     margin-bottom: 20px;
@@ -65,9 +61,10 @@
 }
 
 .flashcard-answer_reactions{
+    position: absolute;
+    bottom: 15px;
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
 }
 
 

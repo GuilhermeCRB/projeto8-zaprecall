@@ -3,7 +3,7 @@ import Flashcard from "./Flashcard";
 import Footer from "./Footer"
 
 export default function FlashcardPage(){
-    const flashcards = [
+    let flashcards = [
         {question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript"},
         {question: "O React é...", answer: "...uma biblioteca JavaScript para construção de interfaces"},
         {question: "Componentes devem iniciar com...", answer: "...letra maiúscula"},
@@ -16,6 +16,12 @@ export default function FlashcardPage(){
 
     const [questionsAnswered, setQuestionsAnswered] = useState(0);
     const [remembered, setRemembered] = useState([]);
+
+    flashcards.sort(compare);
+
+    function compare() {
+        return Math.random() - 0.5;
+    }
 
     return(
         <section className="flashcard-page">
@@ -36,6 +42,7 @@ function Header(){
 }
 
 function Main({flashcards, questionsAnswered, setQuestionsAnswered, remembered, setRemembered}){
+    
     return(
         <main>
             {flashcards.map(({answer,question},index)=>{
